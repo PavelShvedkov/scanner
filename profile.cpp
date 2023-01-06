@@ -21,6 +21,7 @@ Profile::Profile(Profile &other)
     this -> strips = ((this -> counts) * (this -> h)) / ((this -> whiteStripWidth) + (this -> blackStripWidth)); // refactor
 
     this -> h = other.getStep();
+    this -> h0 = other.getInitStep();
 
     this -> x = other.getX();
     this -> z = other.getZ();
@@ -29,8 +30,6 @@ Profile::Profile(Profile &other)
 
 void Profile::set(int counts, float h, float whiteStrip, float blackStrip, float x0, float z0, float minBr = 0, float maxBr = 1)
 {
-    //TODO: add validation
-
     if(counts < 0)
     {
         throw "Counts must be non-negative";
@@ -54,6 +53,7 @@ void Profile::set(int counts, float h, float whiteStrip, float blackStrip, float
     this -> blackStripWidth = blackStrip;
 
     this -> h = h;
+    this -> h0 = h;
 
     this -> setX(x0);
     this -> setZ(z0);
@@ -71,9 +71,14 @@ void Profile::setX(float x0)
 
     int counts = this -> getCounts();
 
+    /*for(int i = 0; i < counts; ++i)
+    {
+        (this -> x).push_back(x0 + i*h0);
+    }*/
+
     for(int i = 0; i < counts; ++i)
     {
-        (this -> x).push_back(x0 + i*h);
+        (this -> x).push_back(x0 + i*h0);
     }
 }
 
@@ -96,6 +101,11 @@ void Profile::setZ(float z0)
 
 void Profile::setBrightness(float minBr = 0, float maxBr = 1)
 {
+    if(!(this -> brightness).empty())
+    {
+        brightness.clear();
+    }
+
     int counts = this -> getCounts();
     float step = this -> getStep();
     float ws = this -> getWhiteStripWidth();
@@ -119,30 +129,56 @@ void Profile::setBrightness(float minBr = 0, float maxBr = 1)
     }
 }
 
-void Profile::setBrightness(float minBr, float maxBr, bool noise)
+void Profile::setBrightness(float minBr, float maxBr, bool noise = false)
 {
+    if(minBr < 0)
+    {
+        throw "Min brightness must be non-negative";
+    }
+
+    if(maxBr <= 0)
+    {
+        throw "Max brightness must be positive";
+    }
+
+    if(minBr >= maxBr)
+    {
+        throw "Min brightness must be greater than max";
+    }
+
+    if(!(this -> brightness).empty())
+    {
+        brightness.clear();
+    }
+
+    this -> minBrightness = minBr;
+    this -> maxBrightness = maxBr;
+
     int counts = this -> getCounts();
     float step = this -> getStep();
     float ws = this -> getWhiteStripWidth();
     float bs = this -> getBlackStripWidth();
 
-    std::default_random_engine generator;
-    std::normal_distribution<float> uniform(0, 0.1);
+
+    std::normal_distribution<float> norm(0, 0.01);
+    std::mt19937 generator{rand()};
 
     for (int i = 0; i < counts; ++i)
     {
         //variable for work modf()
         float rest, intPart;
 
+        //std::default_random_engine generator;
+
         rest = std::modf((i * step) / (ws + bs), &intPart) * (ws + bs);
 
         if(rest > bs)
         {
-            (this -> brightness).push_back(maxBr + uniform(generator));
+            (this -> brightness).push_back(maxBr + norm(generator));
         }
         else
         {
-            (this -> brightness).push_back(minBr + uniform(generator));
+            (this -> brightness).push_back(minBr + norm(generator));
         }
     }
 }
@@ -157,6 +193,11 @@ float Profile::getStep()
     return this -> h;
 }
 
+float Profile::getInitStep()
+{
+    return this -> h0;
+}
+
 float Profile::getWhiteStripWidth()
 {
     return this -> whiteStripWidth;
@@ -165,6 +206,16 @@ float Profile::getWhiteStripWidth()
 float Profile::getBlackStripWidth()
 {
     return this -> blackStripWidth;
+}
+
+float Profile::getMaxBrightness()
+{
+    return this -> maxBrightness;
+}
+
+float Profile::getMinBrightness()
+{
+    return this -> minBrightness;
 }
 
 std::vector<float> Profile::getX()
@@ -192,12 +243,27 @@ std::vector<float> Profile::getBrightness()
     return this -> brightness;
 }
 
-void Profile::move(float dx, float dz)
+void Profile::move(float dx, float dz, bool noise = true)
 {
-    for(int i = 0; i < (this->x).size(); ++i)
+    if(noise)
     {
-        (this -> x)[i] += dx;
-        (this -> z)[i] += dz;
+        float initStep = this -> getInitStep();
+
+        for(int i = 0; i < (this -> z).size(); ++i)
+        {
+            (this -> z)[i] += dz;
+        }
+
+        this -> setBrightness(this->minBrightness, this->maxBrightness, true);
+        this -> h = (z[0] + DISTANCE_TO_TARGET) * initStep/DISTANCE_TO_TARGET;
+    }
+    else
+    {
+        for(int i = 0; i < (this -> x).size(); ++i)
+        {
+            (this -> x)[i] += dx;
+            (this -> z)[i] += dz;
+        }
     }
 }
 
@@ -225,4 +291,12 @@ std::vector<float> Profile::operator [](int index)
     std::vector<float> buffer = {(this->getX())[index], (this->getZ())[index], (this->getBrightness())[index]};
 
     return buffer;
+}
+
+Profile Profile::operator=(Profile other)
+{
+    set(other.getCounts(), other.getStep(), other.getWhiteStripWidth(),
+        other.getBlackStripWidth(), other.getX0(), other.getZ0(),
+        other.getMinBrightness(), other.getMaxBrightness());
+    return *this;
 }

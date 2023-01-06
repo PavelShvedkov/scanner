@@ -73,5 +73,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QTimer *timer;
+
+    const float FRAME_STEP = 0.001;
+    const int FRAME_FREQUENCY = 30;
 };
 #endif // MAINWINDOW_H

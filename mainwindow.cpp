@@ -20,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
     enableMagnifier();
     enableMovingOnPlot();
     enablePicker();
-
 }
 
 MainWindow::~MainWindow()
@@ -49,8 +48,6 @@ void MainWindow::setPlotBright()
     ui -> qwtPlotBright -> setAxisTitle(QwtPlot::xBottom, "X");
     ui -> qwtPlotBright -> insertLegend( new QwtLegend() );
 }
-
-
 
 void MainWindow::setPlotGrid()
 {
@@ -168,7 +165,7 @@ void MainWindow::on_plotButton_clicked(bool checked)
 
     ui -> qwtPlot -> setAxisScale(QwtPlot::yLeft, 0, zMax);
 
-    (this -> profile) = Profile(counts, step, ws, bs, X0, Z0, minBr, maxBr);
+    (this -> profile).set(counts, step, ws, bs, X0, Z0, minBr, maxBr);
 
     std::vector<float> x = (this -> profile).getX();
     std::vector<float> z = (this -> profile).getZ();
@@ -195,7 +192,7 @@ void MainWindow::on_startButton_clicked()
     connect(timer, SIGNAL(timeout()),this,
             SLOT(plotFrame()));
 
-    timer -> start(20);
+    timer -> start(FRAME_FREQUENCY);
 }
 
 void MainWindow::plotFrame()
@@ -203,8 +200,9 @@ void MainWindow::plotFrame()
     float zMax =  (ui->zMaxBox->text()).toFloat();
 
     points.clear();
+    brightPoints.clear();
 
-    (this -> profile).move(0, 0.01);
+    (this -> profile).move(0, FRAME_STEP, true);
 
     if((this -> profile).getZ()[0] > zMax)
     {
@@ -214,16 +212,24 @@ void MainWindow::plotFrame()
 
     std::vector<float> x = (this -> profile).getX();
     std::vector<float> z = (this -> profile).getZ();
+    std::vector<float> bright = (this -> profile).getBrightness();
 
 
     for(int i = 0; i < (this -> profile).getCounts(); i++)
     {
         points << QPointF(x[i], z[i]);
+        brightPoints << QPointF(x[i], bright[i]);
     }
 
-    curve -> setSamples(points);
+
+    curve -> setSamples( points ); // ассоциировать набор точек с кривой
+    brightCurve -> setSamples (brightPoints);
+
+    curve -> attach(ui -> qwtPlot);
+    brightCurve -> attach(ui -> qwtPlotBright);
 
     ui -> qwtPlot -> replot();
+    ui -> qwtPlotBright -> replot();
 }
 
 void MainWindow::on_stopButton_clicked()
