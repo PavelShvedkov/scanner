@@ -10,7 +10,7 @@ Profile::Profile(int counts, float h, float whiteStrip, float blackStrip, float 
     this -> set(counts, h, whiteStrip, blackStrip, x0, z0, minBr, maxBr);
 }
 
-Profile::Profile(Profile &other)
+Profile::Profile(const Profile &other)
 {
     this -> counts = other.getCounts();
 
@@ -196,57 +196,57 @@ void Profile::setStep(float h)
     this -> h = h;
 }
 
-int Profile::getCounts()
+int Profile::getCounts () const
 {
     return this -> counts;
 }
 
-float Profile::getStep()
+float Profile::getStep() const
 {
     return this -> h;
 }
 
-float Profile::getWhiteStripWidth()
+float Profile::getWhiteStripWidth() const
 {
     return this -> whiteStripWidth;
 }
 
-float Profile::getBlackStripWidth()
+float Profile::getBlackStripWidth() const
 {
     return this -> blackStripWidth;
 }
 
-float Profile::getMaxBrightness()
+float Profile::getMaxBrightness() const
 {
     return this -> maxBrightness;
 }
 
-float Profile::getMinBrightness()
+float Profile::getMinBrightness() const
 {
     return this -> minBrightness;
 }
 
-std::vector<float> Profile::getX()
+std::vector<float> Profile::getX() const
 {
     return this -> x;
 }
 
-float Profile::getX0()
+float Profile::getX0() const
 {
     return this -> x0;
 }
 
-float Profile::getZ0()
+float Profile::getZ0() const
 {
     return this -> z0;
 }
 
-std::vector<float> Profile::getZ()
+std::vector<float> Profile::getZ() const
 {
     return this -> z;
 }
 
-std::vector<float> Profile::getBrightness()
+std::vector<float> Profile::getBrightness() const
 {
     return this -> brightness;
 }
@@ -286,10 +286,15 @@ std::vector<float> Profile::operator [](int index)
     return buffer;
 }
 
-Profile Profile::operator=(Profile other)
+Profile& Profile::operator=(const Profile &other)
 {
-    set(other.getCounts(), other.getStep(), other.getWhiteStripWidth(),
-        other.getBlackStripWidth(), other.getX0(), other.getZ0(),
-        other.getMinBrightness(), other.getMaxBrightness());
+    this -> set(other.getCounts(), other.getStep(),
+                 other.getWhiteStripWidth(),
+                 other.getBlackStripWidth(),
+                 other.getX0(),
+                 other.getZ0(),
+                 other.getMinBrightness(),
+                 other.getMaxBrightness());
+
     return *this;
 }

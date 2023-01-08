@@ -209,13 +209,12 @@ void MainWindow::plotFrame()
 
     if((this -> profile).getZ()[0] > zMax)
     {
-        (this -> profile) = this -> initProfile;
+        (this -> profile) = (this -> initProfile);
     }
 
     float minBr = (this -> profile).getMinBrightness();//(ui -> minBrBox -> text()).toFloat();
     float maxBr = (this -> profile).getMaxBrightness();//(ui -> maxBrBox -> text()).toFloat();
     float initStep = (this -> initProfile).getStep();
-
 
     std::vector<float> z = (this -> profile).getZ();
     std::vector<float> x = (this -> profile).getX();
@@ -238,7 +237,6 @@ void MainWindow::plotFrame()
         points << QPointF(x[i], z[i]);
         brightPoints << QPointF(x[i], bright[i]);
     }
-
 
     curve -> setSamples( points ); // ассоциировать набор точек с кривой
     brightCurve -> setSamples (brightPoints);

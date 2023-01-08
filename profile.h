@@ -11,7 +11,7 @@ class Profile
 public:
     Profile();
     Profile(int, float, float, float, float, float, float = 0, float = 1);
-    Profile(Profile &);
+    Profile(const Profile&);
 
     void set(int, float, float, float, float, float, float, float);
     void setX(float);
@@ -20,24 +20,24 @@ public:
     void setBrightnessWithNoise(float, float);
     void setStep(float);
 
-    int getCounts();
-    float getStep();
-    float getWhiteStripWidth();
-    float getBlackStripWidth();
-    float getMaxBrightness();
-    float getMinBrightness();
-    float getX0();
-    float getZ0();
+    int   getCounts() const;
+    float getStep() const;
+    float getWhiteStripWidth() const;
+    float getBlackStripWidth() const;
+    float getMaxBrightness() const;
+    float getMinBrightness() const;
+    float getX0() const;
+    float getZ0() const;
 
-    std::vector<float> getX();
-    std::vector<float> getZ();
-    std::vector<float> getBrightness();
+    std::vector<float> getX() const;
+    std::vector<float> getZ() const;
+    std::vector<float> getBrightness() const;
 
     void move(float dx, float dz);
     void print();
 
     std::vector<float> operator[](int other);
-    Profile operator=(Profile);
+    Profile& operator=(const Profile&);
 
 private:
     int counts; //количество точек
