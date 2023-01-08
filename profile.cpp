@@ -17,11 +17,12 @@ Profile::Profile(Profile &other)
     this -> whiteStripWidth = other.getWhiteStripWidth();
     this -> blackStripWidth = other.getBlackStripWidth();
 
-
     this -> strips = ((this -> counts) * (this -> h)) / ((this -> whiteStripWidth) + (this -> blackStripWidth)); // refactor
 
     this -> h = other.getStep();
-    this -> h0 = other.getInitStep();
+
+    this -> maxBrightness = other.getMaxBrightness();
+    this -> minBrightness = other.getMinBrightness();
 
     this -> x = other.getX();
     this -> z = other.getZ();
@@ -40,11 +41,6 @@ void Profile::set(int counts, float h, float whiteStrip, float blackStrip, float
         throw "Width of black and white strips must be positive";
     }
 
-    if(h <= 0)
-    {
-        throw "Step must be positive";
-    }
-
     this -> counts = counts;
 
     this -> strips = (counts * h) / (whiteStrip + blackStrip); // refactor
@@ -52,12 +48,11 @@ void Profile::set(int counts, float h, float whiteStrip, float blackStrip, float
     this -> whiteStripWidth = whiteStrip;
     this -> blackStripWidth = blackStrip;
 
-    this -> h = h;
-    this -> h0 = h;
+    this -> setStep(h);
 
     this -> setX(x0);
     this -> setZ(z0);
-    this -> setBrightness(minBr, maxBr ,true);
+    this -> setBrightnessWithNoise(minBr, maxBr);
 }
 
 void Profile::setX(float x0)
@@ -73,7 +68,7 @@ void Profile::setX(float x0)
 
     for(int i = 0; i < counts; ++i)
     {
-        (this -> x).push_back(x0 + i*h0);
+        (this -> x).push_back(x0 + i*h);
     }
 }
 
@@ -96,6 +91,21 @@ void Profile::setZ(float z0)
 
 void Profile::setBrightness(float minBr = 0, float maxBr = 1)
 {
+    if(minBr < 0)
+    {
+        throw "Min brightness must be non-negative";
+    }
+
+    if(maxBr <= 0)
+    {
+        throw "Max brightness must be positive";
+    }
+
+    if(minBr >= maxBr)
+    {
+        throw "Min brightness must be greater than max";
+    }
+
     if(!(this -> brightness).empty())
     {
         brightness.clear();
@@ -124,22 +134,23 @@ void Profile::setBrightness(float minBr = 0, float maxBr = 1)
     }
 }
 
-void Profile::setBrightness(float minBr, float maxBr, bool noise = false)
+void Profile::setBrightnessWithNoise(float minBr, float maxBr)
 {
     if(minBr < 0)
     {
         throw "Min brightness must be non-negative";
     }
 
-    if(maxBr <= 0)
+    if(maxBr + 4 * NOISE_VAR < 0)
     {
         throw "Max brightness must be positive";
     }
 
-    if(minBr >= maxBr)
+    //TODO придумать проверку предельных значений шума с учётом шума
+    /*if(minBr >= maxBr + 4 * NOISE_VAR )
     {
         throw "Min brightness must be greater than max";
-    }
+    }*/
 
     if(!(this -> brightness).empty())
     {
@@ -154,8 +165,7 @@ void Profile::setBrightness(float minBr, float maxBr, bool noise = false)
     float ws = this -> getWhiteStripWidth();
     float bs = this -> getBlackStripWidth();
 
-
-    std::normal_distribution<float> norm(0, 0.01);
+    std::normal_distribution<float> norm(NOISE_MEAN, NOISE_VAR);
     std::mt19937 generator{rand()};
 
     for (int i = 0; i < counts; ++i)
@@ -176,6 +186,16 @@ void Profile::setBrightness(float minBr, float maxBr, bool noise = false)
     }
 }
 
+void Profile::setStep(float h)
+{
+    if(h <= 0)
+    {
+        throw "Step must be positive";
+    }
+
+    this -> h = h;
+}
+
 int Profile::getCounts()
 {
     return this -> counts;
@@ -184,11 +204,6 @@ int Profile::getCounts()
 float Profile::getStep()
 {
     return this -> h;
-}
-
-float Profile::getInitStep()
-{
-    return this -> h0;
 }
 
 float Profile::getWhiteStripWidth()
@@ -236,27 +251,12 @@ std::vector<float> Profile::getBrightness()
     return this -> brightness;
 }
 
-void Profile::move(float dx, float dz, bool noise = true)
+void Profile::move(float dx, float dz)
 {
-    if(noise)
+    for(int i = 0; i < (this -> x).size(); ++i)
     {
-        float initStep = this -> getInitStep();
-
-        for(int i = 0; i < (this -> z).size(); ++i)
-        {
-            (this -> z)[i] += dz;
-        }
-
-        this -> setBrightness(this->minBrightness, this->maxBrightness, true);
-        this -> h = (z[0] + DISTANCE_TO_TARGET) * initStep/DISTANCE_TO_TARGET;
-    }
-    else
-    {
-        for(int i = 0; i < (this -> x).size(); ++i)
-        {
-            (this -> x)[i] += dx;
-            (this -> z)[i] += dz;
-        }
+        (this -> x)[i] += dx;
+        (this -> z)[i] += dz;
     }
 }
 

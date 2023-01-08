@@ -50,8 +50,6 @@ public:
     void setCurveParameters();
     void setCurveBrightParameters();
 
-
-    // новый массив точек кривой
     void addPointsToCurveAndShow(float x0, float y0);
 
     void enableMagnifier();
@@ -62,7 +60,8 @@ public:
     QwtPlotCurve *brightCurve;
     QPolygonF points;
     QPolygonF brightPoints;
-    Profile profile;
+    Profile profile; //состояние на данные момент
+    Profile initProfile; //состояние при инициализации
 
 private slots:
     void on_plotButton_clicked(bool checked);
@@ -76,5 +75,7 @@ private:
 
     const float FRAME_STEP = 0.001;
     const int FRAME_FREQUENCY = 30;
+    const float BRIGHTNESS_DECAY = 0.999;
+    const float DISTANCE_TO_TARGET = 1;
 };
 #endif // MAINWINDOW_H

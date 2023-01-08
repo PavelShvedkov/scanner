@@ -17,24 +17,23 @@ public:
     void setX(float);
     void setZ(float);
     void setBrightness(float, float);
-    void setBrightness(float, float, bool);
+    void setBrightnessWithNoise(float, float);
+    void setStep(float);
 
     int getCounts();
     float getStep();
-    float getInitStep();
     float getWhiteStripWidth();
     float getBlackStripWidth();
     float getMaxBrightness();
     float getMinBrightness();
-
-    std::vector<float> getX();
     float getX0();
     float getZ0();
+
+    std::vector<float> getX();
     std::vector<float> getZ();
     std::vector<float> getBrightness();
 
-    void move(float dx, float dz, bool noise);
-
+    void move(float dx, float dz);
     void print();
 
     std::vector<float> operator[](int other);
@@ -46,12 +45,9 @@ private:
     float blackStripWidth; //ширина белой и чёрной полосок
     int strips; //число чёрных полосок
 
-    float h0; //шаг измерения в z0
-    float h; //шаг измерения в z_i
+    float h; //шаг
     float x0;
     float z0; //начальные значения x и z
-
-    const float DISTANCE_TO_TARGET = 1;
 
     float maxBrightness;
     float minBrightness;
@@ -59,6 +55,9 @@ private:
     std::vector<float> x;
     std::vector<float> z;
     std::vector<float> brightness;
+
+    const float NOISE_MEAN = 0;
+    const float NOISE_VAR = 0.01;
 };
 
 #endif // PROFILE_H

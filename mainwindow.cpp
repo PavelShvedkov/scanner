@@ -131,15 +131,15 @@ void MainWindow::enablePicker()
                 QwtPlot::xBottom, QwtPlot::yLeft, // ассоциация с осями
     QwtPlotPicker::CrossRubberBand, // стиль перпендикулярных линий
     QwtPicker::AlwaysOn, // всегда включен
-    ui->qwtPlotBright->canvas() ); // ассоциация с полем
+    ui -> qwtPlotBright -> canvas() ); // ассоциация с полем
 
     d_picker_plot -> setRubberBandPen( QColor( Qt::red ) );
     d_picker_plot -> setTrackerPen( QColor( Qt::black ) );
-    d_picker_plot->setStateMachine( new QwtPickerDragPointMachine() );
+    d_picker_plot -> setStateMachine( new QwtPickerDragPointMachine() );
 
-    d_picker_plot_br->setRubberBandPen( QColor( Qt::red ) );
-    d_picker_plot_br->setTrackerPen( QColor( Qt::black ) );
-    d_picker_plot_br->setStateMachine( new QwtPickerDragPointMachine() );
+    d_picker_plot_br -> setRubberBandPen( QColor( Qt::red ) );
+    d_picker_plot_br -> setTrackerPen( QColor( Qt::black ) );
+    d_picker_plot_br -> setStateMachine( new QwtPickerDragPointMachine() );
 }
 
 void MainWindow::on_plotButton_clicked(bool checked)
@@ -164,8 +164,10 @@ void MainWindow::on_plotButton_clicked(bool checked)
     float Z0 =0;
 
     ui -> qwtPlot -> setAxisScale(QwtPlot::yLeft, 0, zMax);
+    ui -> qwtPlotBright -> setAxisScale(QwtPlot::yLeft, minBr, maxBr);
 
     (this -> profile).set(counts, step, ws, bs, X0, Z0, minBr, maxBr);
+    (this -> initProfile).set(counts, step, ws, bs, X0, Z0, minBr, maxBr);
 
     std::vector<float> x = (this -> profile).getX();
     std::vector<float> z = (this -> profile).getZ();
@@ -176,6 +178,7 @@ void MainWindow::on_plotButton_clicked(bool checked)
         points << QPointF(x[i], z[i]);
         brightPoints << QPointF(x[i], bright[i]);
     }
+
     curve -> setSamples( points ); // ассоциировать набор точек с кривой
     brightCurve -> setSamples (brightPoints);
 
@@ -197,23 +200,38 @@ void MainWindow::on_startButton_clicked()
 
 void MainWindow::plotFrame()
 {
-    float zMax =  (ui->zMaxBox->text()).toFloat();
+    float zMax =  (ui -> zMaxBox -> text()).toFloat();
 
     points.clear();
     brightPoints.clear();
 
-    (this -> profile).move(0, FRAME_STEP, true);
+    (this -> profile).move(0, FRAME_STEP);
 
     if((this -> profile).getZ()[0] > zMax)
     {
-        float z0 = (this -> profile).getZ0();
-        (this -> profile).setZ(z0);
+        (this -> profile) = this -> initProfile;
     }
 
-    std::vector<float> x = (this -> profile).getX();
+    float minBr = (this -> profile).getMinBrightness();//(ui -> minBrBox -> text()).toFloat();
+    float maxBr = (this -> profile).getMaxBrightness();//(ui -> maxBrBox -> text()).toFloat();
+    float initStep = (this -> initProfile).getStep();
+
+
     std::vector<float> z = (this -> profile).getZ();
+    std::vector<float> x = (this -> profile).getX();
     std::vector<float> bright = (this -> profile).getBrightness();
 
+    if(maxBr <= minBr)
+    {
+        maxBr = minBr;
+    }
+    else
+    {
+        maxBr *= BRIGHTNESS_DECAY;
+    }
+
+    (this -> profile).setBrightnessWithNoise(minBr, maxBr);
+    (this -> profile).setStep((z[0] + DISTANCE_TO_TARGET) * initStep/DISTANCE_TO_TARGET);
 
     for(int i = 0; i < (this -> profile).getCounts(); i++)
     {
