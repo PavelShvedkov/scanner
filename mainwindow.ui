@@ -51,7 +51,7 @@
     </item>
     <item>
      <widget class="QwtPlot" name="qwtPlotBright">
-      <property name="autoReplot">
+      <property name="autoReplot" stdset="0">
        <bool>false</bool>
       </property>
      </widget>
@@ -93,10 +93,10 @@
         <property name="lineWidth">
          <number>1</number>
         </property>
-        <property name="indent">
+        <property name="indent" stdset="0">
          <number>10</number>
         </property>
-        <property name="plainText">
+        <property name="plainText" stdset="0">
          <string>Black strip width</string>
         </property>
        </widget>
@@ -119,7 +119,7 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="plainText">
+        <property name="plainText" stdset="0">
          <string>White strip width</string>
         </property>
        </widget>
@@ -142,7 +142,7 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="plainText">
+        <property name="plainText" stdset="0">
          <string>z max</string>
         </property>
        </widget>
@@ -165,7 +165,7 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="plainText">
+        <property name="plainText" stdset="0">
          <string>Step</string>
         </property>
        </widget>
@@ -188,7 +188,7 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="plainText">
+        <property name="plainText" stdset="0">
          <string>Counts</string>
         </property>
        </widget>
@@ -211,7 +211,7 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="plainText">
+        <property name="plainText" stdset="0">
          <string>Max brightness</string>
         </property>
        </widget>
@@ -234,7 +234,7 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="plainText">
+        <property name="plainText" stdset="0">
          <string>Min brightness</string>
         </property>
        </widget>
@@ -276,6 +276,12 @@
         <property name="text">
          <string>Start</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
         <property name="flat">
          <bool>false</bool>
         </property>
@@ -315,11 +321,13 @@
    <class>QwtPlot</class>
    <extends>QFrame</extends>
    <header>qwt_plot.h</header>
+   <container>1</container>
   </customwidget>
   <customwidget>
    <class>QwtTextLabel</class>
    <extends>QFrame</extends>
    <header>qwt_text_label.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>
