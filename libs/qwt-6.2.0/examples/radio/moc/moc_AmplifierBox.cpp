@@ -1,50 +1,58 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'AmplifierBox.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../AmplifierBox.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'AmplifierBox.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_AmplifierBox_t {
-    QByteArrayData data[4];
-    char stringdata0[26];
+    uint offsetsAndSizes[8];
+    char stringdata0[13];
+    char stringdata1[10];
+    char stringdata2[1];
+    char stringdata3[2];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_AmplifierBox_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_AmplifierBox_t qt_meta_stringdata_AmplifierBox = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_AmplifierBox_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_AmplifierBox_t qt_meta_stringdata_AmplifierBox = {
     {
-QT_MOC_LITERAL(0, 0, 12), // "AmplifierBox"
-QT_MOC_LITERAL(1, 13, 9), // "setMaster"
-QT_MOC_LITERAL(2, 23, 0), // ""
-QT_MOC_LITERAL(3, 24, 1) // "v"
-
+        QT_MOC_LITERAL(0, 12),  // "AmplifierBox"
+        QT_MOC_LITERAL(13, 9),  // "setMaster"
+        QT_MOC_LITERAL(23, 0),  // ""
+        QT_MOC_LITERAL(24, 1)   // "v"
     },
-    "AmplifierBox\0setMaster\0\0v"
+    "AmplifierBox",
+    "setMaster",
+    "",
+    "v"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_AmplifierBox[] = {
+Q_CONSTINIT static const uint qt_meta_data_AmplifierBox[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        1,   14, // methods
@@ -54,8 +62,8 @@ static const uint qt_meta_data_AmplifierBox[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags
-       1,    1,   19,    2, 0x0a /* Public */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   20,    2, 0x0a,    1 /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Double,    3,
@@ -63,27 +71,33 @@ static const uint qt_meta_data_AmplifierBox[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject AmplifierBox::staticMetaObject = { {
+    QMetaObject::SuperData::link<QFrame::staticMetaObject>(),
+    qt_meta_stringdata_AmplifierBox.offsetsAndSizes,
+    qt_meta_data_AmplifierBox,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_AmplifierBox_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<AmplifierBox, std::true_type>,
+        // method 'setMaster'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>
+    >,
+    nullptr
+} };
+
 void AmplifierBox::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<AmplifierBox *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
-        case 0: _t->setMaster((*reinterpret_cast< double(*)>(_a[1]))); break;
+        case 0: _t->setMaster((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         default: ;
         }
     }
 }
-
-QT_INIT_METAOBJECT const QMetaObject AmplifierBox::staticMetaObject = { {
-    &QFrame::staticMetaObject,
-    qt_meta_stringdata_AmplifierBox.data,
-    qt_meta_data_AmplifierBox,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *AmplifierBox::metaObject() const
 {
@@ -109,7 +123,7 @@ int AmplifierBox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 1;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 1)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 1;
     }
     return _id;

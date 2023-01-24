@@ -1,50 +1,58 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'SettingsEditor.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../SettingsEditor.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'SettingsEditor.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_SettingsEditor_t {
-    QByteArrayData data[4];
-    char stringdata0[36];
+    uint offsetsAndSizes[8];
+    char stringdata0[15];
+    char stringdata1[7];
+    char stringdata2[1];
+    char stringdata3[13];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_SettingsEditor_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_SettingsEditor_t qt_meta_stringdata_SettingsEditor = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_SettingsEditor_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_SettingsEditor_t qt_meta_stringdata_SettingsEditor = {
     {
-QT_MOC_LITERAL(0, 0, 14), // "SettingsEditor"
-QT_MOC_LITERAL(1, 15, 6), // "edited"
-QT_MOC_LITERAL(2, 22, 0), // ""
-QT_MOC_LITERAL(3, 23, 12) // "PlotSettings"
-
+        QT_MOC_LITERAL(0, 14),  // "SettingsEditor"
+        QT_MOC_LITERAL(15, 6),  // "edited"
+        QT_MOC_LITERAL(22, 0),  // ""
+        QT_MOC_LITERAL(23, 12)   // "PlotSettings"
     },
-    "SettingsEditor\0edited\0\0PlotSettings"
+    "SettingsEditor",
+    "edited",
+    "",
+    "PlotSettings"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_SettingsEditor[] = {
+Q_CONSTINIT static const uint qt_meta_data_SettingsEditor[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        2,   14, // methods
@@ -54,11 +62,11 @@ static const uint qt_meta_data_SettingsEditor[] = {
        0,       // flags
        1,       // signalCount
 
- // signals: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x06 /* Public */,
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   26,    2, 0x06,    1 /* Public */,
 
- // slots: name, argc, parameters, tag, flags
-       1,    0,   27,    2, 0x08 /* Private */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   29,    2, 0x08,    3 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    2,
@@ -69,13 +77,31 @@ static const uint qt_meta_data_SettingsEditor[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject SettingsEditor::staticMetaObject = { {
+    QMetaObject::SuperData::link<QFrame::staticMetaObject>(),
+    qt_meta_stringdata_SettingsEditor.offsetsAndSizes,
+    qt_meta_data_SettingsEditor,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_SettingsEditor_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<SettingsEditor, std::true_type>,
+        // method 'edited'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const PlotSettings &, std::false_type>,
+        // method 'edited'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
+    >,
+    nullptr
+} };
+
 void SettingsEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<SettingsEditor *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
-        case 0: _t->edited((*reinterpret_cast< const PlotSettings(*)>(_a[1]))); break;
+        case 0: _t->edited((*reinterpret_cast< std::add_pointer_t<PlotSettings>>(_a[1]))); break;
         case 1: _t->edited(); break;
         default: ;
         }
@@ -83,23 +109,13 @@ void SettingsEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (SettingsEditor::*)(const PlotSettings & );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&SettingsEditor::edited)) {
+            if (_t _q_method = &SettingsEditor::edited; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
     }
 }
-
-QT_INIT_METAOBJECT const QMetaObject SettingsEditor::staticMetaObject = { {
-    &QFrame::staticMetaObject,
-    qt_meta_stringdata_SettingsEditor.data,
-    qt_meta_data_SettingsEditor,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *SettingsEditor::metaObject() const
 {
@@ -125,7 +141,7 @@ int SettingsEditor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 2)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 2;
     }
     return _id;
@@ -134,7 +150,7 @@ int SettingsEditor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void SettingsEditor::edited(const PlotSettings & _t1)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

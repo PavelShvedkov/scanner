@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created by: The Resource Compiler for Qt version 5.12.8
+** Created by: The Resource Compiler for Qt version 6.4.2
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 static const unsigned char qt_resource_data[] = {
-  // /home/pavel/repositories/scannerOscillation/scanner/libs/qwt-6.2.0/playground/svgmap/Schlosspark_Nymphenburg.svg
+  // D:/repositories/scanner/libs/qwt-6.2.0/playground/svgmap/Schlosspark_Nymphenburg.svg
   0x0,0x1,0x71,0x4,
   0x3c,
   0x73,0x76,0x67,0x20,0x68,0x65,0x69,0x67,0x68,0x74,0x3d,0x22,0x39,0x37,0x33,0x2e,
@@ -5963,7 +5963,6 @@ namespace QT_NAMESPACE {
 #endif
 
 bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
-
 bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
 
 #ifdef QT_NAMESPACE
@@ -5973,16 +5972,18 @@ bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, 
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_svgmap)();
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_svgmap)()
 {
+    int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qRegisterResourceData)
-        (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
+        (version, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_svgmap)();
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_svgmap)()
 {
+    int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qUnregisterResourceData)
-       (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
+       (version, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 

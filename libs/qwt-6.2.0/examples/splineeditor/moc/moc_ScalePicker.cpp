@@ -1,51 +1,61 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ScalePicker.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../ScalePicker.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'ScalePicker.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_ScalePicker_t {
-    QByteArrayData data[5];
-    char stringdata0[32];
+    uint offsetsAndSizes[10];
+    char stringdata0[12];
+    char stringdata1[8];
+    char stringdata2[1];
+    char stringdata3[5];
+    char stringdata4[6];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_ScalePicker_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_ScalePicker_t qt_meta_stringdata_ScalePicker = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_ScalePicker_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_ScalePicker_t qt_meta_stringdata_ScalePicker = {
     {
-QT_MOC_LITERAL(0, 0, 11), // "ScalePicker"
-QT_MOC_LITERAL(1, 12, 7), // "clicked"
-QT_MOC_LITERAL(2, 20, 0), // ""
-QT_MOC_LITERAL(3, 21, 4), // "axis"
-QT_MOC_LITERAL(4, 26, 5) // "value"
-
+        QT_MOC_LITERAL(0, 11),  // "ScalePicker"
+        QT_MOC_LITERAL(12, 7),  // "clicked"
+        QT_MOC_LITERAL(20, 0),  // ""
+        QT_MOC_LITERAL(21, 4),  // "axis"
+        QT_MOC_LITERAL(26, 5)   // "value"
     },
-    "ScalePicker\0clicked\0\0axis\0value"
+    "ScalePicker",
+    "clicked",
+    "",
+    "axis",
+    "value"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_ScalePicker[] = {
+Q_CONSTINIT static const uint qt_meta_data_ScalePicker[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        1,   14, // methods
@@ -55,8 +65,8 @@ static const uint qt_meta_data_ScalePicker[] = {
        0,       // flags
        1,       // signalCount
 
- // signals: name, argc, parameters, tag, flags
-       1,    2,   19,    2, 0x06 /* Public */,
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    2,   20,    2, 0x06,    1 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Double,    3,    4,
@@ -64,36 +74,43 @@ static const uint qt_meta_data_ScalePicker[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject ScalePicker::staticMetaObject = { {
+    QMetaObject::SuperData::link<QObject::staticMetaObject>(),
+    qt_meta_stringdata_ScalePicker.offsetsAndSizes,
+    qt_meta_data_ScalePicker,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_ScalePicker_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<ScalePicker, std::true_type>,
+        // method 'clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>
+    >,
+    nullptr
+} };
+
 void ScalePicker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<ScalePicker *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
-        case 0: _t->clicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+        case 0: _t->clicked((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (ScalePicker::*)(int , double );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ScalePicker::clicked)) {
+            if (_t _q_method = &ScalePicker::clicked; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
     }
 }
-
-QT_INIT_METAOBJECT const QMetaObject ScalePicker::staticMetaObject = { {
-    &QObject::staticMetaObject,
-    qt_meta_stringdata_ScalePicker.data,
-    qt_meta_data_ScalePicker,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *ScalePicker::metaObject() const
 {
@@ -119,7 +136,7 @@ int ScalePicker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 1;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 1)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 1;
     }
     return _id;
@@ -128,7 +145,7 @@ int ScalePicker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void ScalePicker::clicked(int _t1, double _t2)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

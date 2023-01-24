@@ -8,7 +8,7 @@ CONFIG += c++11
 CONFIG += qwt
 
 INCLUDEPATH += ./libs/qwt-6.2.0/src
-LIBS += -L./libs/qwt-6.2.0/lib/ -lqwt
+LIBS += -L./libs/qwt-6.2.0/lib/ -lqwtd
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -39,3 +39,11 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
+#win32:CONFIG(release, debug|release): LIBS += -LC:/build-qwt-Desktop_Qt_6_4_2_MinGW_64_bit-Release/lib/ -lqwt
+#else:win32:CONFIG(debug, debug|release): LIBS += -LC:/build-qwt-Desktop_Qt_6_4_2_MinGW_64_bit-Release/lib/ -lqwtd
+#else:unix: LIBS += -L$$PWD/libs/build-qwt-Desktop_Qt_6_4_2_MinGW_64_bit-Release/lib/ -lqwt
+
+#INCLUDEPATH += C:/qwt-6.2.0/src
+#DEPENDPATH += C:/qwt-6.2.0/src

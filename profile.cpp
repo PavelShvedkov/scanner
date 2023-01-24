@@ -1,4 +1,5 @@
 #include "profile.h"
+#include <string>
 
 Profile::Profile()
 {
@@ -166,7 +167,7 @@ void Profile::setBrightnessWithNoise(float minBr, float maxBr)
     float bs = this -> getBlackStripWidth();
 
     std::normal_distribution<float> norm(NOISE_MEAN, NOISE_VAR);
-    std::mt19937 generator{rand()};
+    std::mt19937 generator(std::rand());
 
     for (int i = 0; i < counts; ++i)
     {
@@ -253,7 +254,7 @@ std::vector<float> Profile::getBrightness() const
 
 void Profile::move(float dx, float dz)
 {
-    for(int i = 0; i < (this -> x).size(); ++i)
+    for(int i = 0; i < (this -> x).size();  ++i)
     {
         (this -> x)[i] += dx;
         (this -> z)[i] += dz;

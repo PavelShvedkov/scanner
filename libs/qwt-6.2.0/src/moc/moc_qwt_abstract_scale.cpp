@@ -1,53 +1,64 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qwt_abstract_scale.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../qwt_abstract_scale.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qwt_abstract_scale.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_QwtAbstractScale_t {
-    QByteArrayData data[6];
-    char stringdata0[81];
+    uint offsetsAndSizes[12];
+    char stringdata0[17];
+    char stringdata1[11];
+    char stringdata2[11];
+    char stringdata3[14];
+    char stringdata4[14];
+    char stringdata5[14];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QwtAbstractScale_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_QwtAbstractScale_t qt_meta_stringdata_QwtAbstractScale = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_QwtAbstractScale_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_QwtAbstractScale_t qt_meta_stringdata_QwtAbstractScale = {
     {
-QT_MOC_LITERAL(0, 0, 16), // "QwtAbstractScale"
-QT_MOC_LITERAL(1, 17, 10), // "lowerBound"
-QT_MOC_LITERAL(2, 28, 10), // "upperBound"
-QT_MOC_LITERAL(3, 39, 13), // "scaleMaxMajor"
-QT_MOC_LITERAL(4, 53, 13), // "scaleMaxMinor"
-QT_MOC_LITERAL(5, 67, 13) // "scaleStepSize"
-
+        QT_MOC_LITERAL(0, 16),  // "QwtAbstractScale"
+        QT_MOC_LITERAL(17, 10),  // "lowerBound"
+        QT_MOC_LITERAL(28, 10),  // "upperBound"
+        QT_MOC_LITERAL(39, 13),  // "scaleMaxMajor"
+        QT_MOC_LITERAL(53, 13),  // "scaleMaxMinor"
+        QT_MOC_LITERAL(67, 13)   // "scaleStepSize"
     },
-    "QwtAbstractScale\0lowerBound\0upperBound\0"
-    "scaleMaxMajor\0scaleMaxMinor\0scaleStepSize"
+    "QwtAbstractScale",
+    "lowerBound",
+    "upperBound",
+    "scaleMaxMajor",
+    "scaleMaxMinor",
+    "scaleStepSize"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_QwtAbstractScale[] = {
+Q_CONSTINIT static const uint qt_meta_data_QwtAbstractScale[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        0,    0, // methods
@@ -58,22 +69,43 @@ static const uint qt_meta_data_QwtAbstractScale[] = {
        0,       // signalCount
 
  // properties: name, type, flags
-       1, QMetaType::Double, 0x00095103,
-       2, QMetaType::Double, 0x00095103,
-       3, QMetaType::Int, 0x00095103,
-       4, QMetaType::Int, 0x00095103,
-       5, QMetaType::Double, 0x00095103,
+       1, QMetaType::Double, 0x00015103, uint(-1), 0,
+       2, QMetaType::Double, 0x00015103, uint(-1), 0,
+       3, QMetaType::Int, 0x00015103, uint(-1), 0,
+       4, QMetaType::Int, 0x00015103, uint(-1), 0,
+       5, QMetaType::Double, 0x00015103, uint(-1), 0,
 
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject QwtAbstractScale::staticMetaObject = { {
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    qt_meta_stringdata_QwtAbstractScale.offsetsAndSizes,
+    qt_meta_data_QwtAbstractScale,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_QwtAbstractScale_t,
+        // property 'lowerBound'
+        QtPrivate::TypeAndForceComplete<double, std::true_type>,
+        // property 'upperBound'
+        QtPrivate::TypeAndForceComplete<double, std::true_type>,
+        // property 'scaleMaxMajor'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
+        // property 'scaleMaxMinor'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
+        // property 'scaleStepSize'
+        QtPrivate::TypeAndForceComplete<double, std::true_type>,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<QwtAbstractScale, std::true_type>
+    >,
+    nullptr
+} };
+
 void QwtAbstractScale::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-
-#ifndef QT_NO_PROPERTIES
-    if (_c == QMetaObject::ReadProperty) {
+if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<QwtAbstractScale *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< double*>(_v) = _t->lowerBound(); break;
@@ -85,7 +117,7 @@ void QwtAbstractScale::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         }
     } else if (_c == QMetaObject::WriteProperty) {
         auto *_t = static_cast<QwtAbstractScale *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->setLowerBound(*reinterpret_cast< double*>(_v)); break;
@@ -96,23 +128,13 @@ void QwtAbstractScale::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
+    } else if (_c == QMetaObject::BindableProperty) {
     }
-#endif // QT_NO_PROPERTIES
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
+    (void)_o;
+    (void)_id;
+    (void)_c;
+    (void)_a;
 }
-
-QT_INIT_METAOBJECT const QMetaObject QwtAbstractScale::staticMetaObject = { {
-    &QWidget::staticMetaObject,
-    qt_meta_stringdata_QwtAbstractScale.data,
-    qt_meta_data_QwtAbstractScale,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *QwtAbstractScale::metaObject() const
 {
@@ -132,24 +154,12 @@ int QwtAbstractScale::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
-    
-#ifndef QT_NO_PROPERTIES
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
-            || _c == QMetaObject::ResetProperty || _c == QMetaObject::RegisterPropertyMetaType) {
+            || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
+            || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
         _id -= 5;
-    } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 5;
-    } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 5;
-    } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 5;
-    } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 5;
-    } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 5;
     }
-#endif // QT_NO_PROPERTIES
     return _id;
 }
 QT_WARNING_POP

@@ -1,50 +1,58 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'KnobBox.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../KnobBox.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'KnobBox.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_KnobBox_t {
-    QByteArrayData data[4];
-    char stringdata0[18];
+    uint offsetsAndSizes[8];
+    char stringdata0[8];
+    char stringdata1[7];
+    char stringdata2[1];
+    char stringdata3[2];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_KnobBox_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_KnobBox_t qt_meta_stringdata_KnobBox = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_KnobBox_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_KnobBox_t qt_meta_stringdata_KnobBox = {
     {
-QT_MOC_LITERAL(0, 0, 7), // "KnobBox"
-QT_MOC_LITERAL(1, 8, 6), // "setNum"
-QT_MOC_LITERAL(2, 15, 0), // ""
-QT_MOC_LITERAL(3, 16, 1) // "v"
-
+        QT_MOC_LITERAL(0, 7),  // "KnobBox"
+        QT_MOC_LITERAL(8, 6),  // "setNum"
+        QT_MOC_LITERAL(15, 0),  // ""
+        QT_MOC_LITERAL(16, 1)   // "v"
     },
-    "KnobBox\0setNum\0\0v"
+    "KnobBox",
+    "setNum",
+    "",
+    "v"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_KnobBox[] = {
+Q_CONSTINIT static const uint qt_meta_data_KnobBox[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        1,   14, // methods
@@ -54,8 +62,8 @@ static const uint qt_meta_data_KnobBox[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags
-       1,    1,   19,    2, 0x08 /* Private */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   20,    2, 0x08,    1 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Double,    3,
@@ -63,27 +71,33 @@ static const uint qt_meta_data_KnobBox[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject KnobBox::staticMetaObject = { {
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    qt_meta_stringdata_KnobBox.offsetsAndSizes,
+    qt_meta_data_KnobBox,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_KnobBox_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<KnobBox, std::true_type>,
+        // method 'setNum'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>
+    >,
+    nullptr
+} };
+
 void KnobBox::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<KnobBox *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
-        case 0: _t->setNum((*reinterpret_cast< double(*)>(_a[1]))); break;
+        case 0: _t->setNum((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         default: ;
         }
     }
 }
-
-QT_INIT_METAOBJECT const QMetaObject KnobBox::staticMetaObject = { {
-    &QWidget::staticMetaObject,
-    qt_meta_stringdata_KnobBox.data,
-    qt_meta_data_KnobBox,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *KnobBox::metaObject() const
 {
@@ -109,7 +123,7 @@ int KnobBox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 1;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 1)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 1;
     }
     return _id;

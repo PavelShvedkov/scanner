@@ -1,54 +1,67 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Plot.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../Plot.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'Plot.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_Plot_t {
-    QByteArrayData data[7];
-    char stringdata0[50];
+    uint offsetsAndSizes[14];
+    char stringdata0[5];
+    char stringdata1[8];
+    char stringdata2[1];
+    char stringdata3[11];
+    char stringdata4[9];
+    char stringdata5[13];
+    char stringdata6[3];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Plot_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_Plot_t qt_meta_stringdata_Plot = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_Plot_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_Plot_t qt_meta_stringdata_Plot = {
     {
-QT_MOC_LITERAL(0, 0, 4), // "Plot"
-QT_MOC_LITERAL(1, 5, 7), // "setMode"
-QT_MOC_LITERAL(2, 13, 0), // ""
-QT_MOC_LITERAL(3, 14, 10), // "exportPlot"
-QT_MOC_LITERAL(4, 25, 8), // "showItem"
-QT_MOC_LITERAL(5, 34, 12), // "QwtPlotItem*"
-QT_MOC_LITERAL(6, 47, 2) // "on"
-
+        QT_MOC_LITERAL(0, 4),  // "Plot"
+        QT_MOC_LITERAL(5, 7),  // "setMode"
+        QT_MOC_LITERAL(13, 0),  // ""
+        QT_MOC_LITERAL(14, 10),  // "exportPlot"
+        QT_MOC_LITERAL(25, 8),  // "showItem"
+        QT_MOC_LITERAL(34, 12),  // "QwtPlotItem*"
+        QT_MOC_LITERAL(47, 2)   // "on"
     },
-    "Plot\0setMode\0\0exportPlot\0showItem\0"
-    "QwtPlotItem*\0on"
+    "Plot",
+    "setMode",
+    "",
+    "exportPlot",
+    "showItem",
+    "QwtPlotItem*",
+    "on"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_Plot[] = {
+Q_CONSTINIT static const uint qt_meta_data_Plot[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
@@ -58,10 +71,10 @@ static const uint qt_meta_data_Plot[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags
-       1,    1,   29,    2, 0x0a /* Public */,
-       3,    0,   32,    2, 0x0a /* Public */,
-       4,    2,   33,    2, 0x08 /* Private */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   32,    2, 0x0a,    1 /* Public */,
+       3,    0,   35,    2, 0x0a,    3 /* Public */,
+       4,    2,   36,    2, 0x08,    4 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    2,
@@ -71,40 +84,52 @@ static const uint qt_meta_data_Plot[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject Plot::staticMetaObject = { {
+    QMetaObject::SuperData::link<QwtPlot::staticMetaObject>(),
+    qt_meta_stringdata_Plot.offsetsAndSizes,
+    qt_meta_data_Plot,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_Plot_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<Plot, std::true_type>,
+        // method 'setMode'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'exportPlot'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'showItem'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QwtPlotItem *, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>
+    >,
+    nullptr
+} };
+
 void Plot::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<Plot *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
-        case 0: _t->setMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 0: _t->setMode((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 1: _t->exportPlot(); break;
-        case 2: _t->showItem((*reinterpret_cast< QwtPlotItem*(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+        case 2: _t->showItem((*reinterpret_cast< std::add_pointer_t<QwtPlotItem*>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
-        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
         case 2:
             switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QwtPlotItem* >(); break;
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QwtPlotItem* >(); break;
             }
             break;
         }
     }
 }
-
-QT_INIT_METAOBJECT const QMetaObject Plot::staticMetaObject = { {
-    &QwtPlot::staticMetaObject,
-    qt_meta_stringdata_Plot.data,
-    qt_meta_data_Plot,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *Plot::metaObject() const
 {

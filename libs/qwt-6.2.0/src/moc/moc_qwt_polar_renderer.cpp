@@ -1,47 +1,49 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qwt_polar_renderer.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../qwt_polar_renderer.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qwt_polar_renderer.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_QwtPolarRenderer_t {
-    QByteArrayData data[1];
+    uint offsetsAndSizes[2];
     char stringdata0[17];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QwtPolarRenderer_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_QwtPolarRenderer_t qt_meta_stringdata_QwtPolarRenderer = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_QwtPolarRenderer_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_QwtPolarRenderer_t qt_meta_stringdata_QwtPolarRenderer = {
     {
-QT_MOC_LITERAL(0, 0, 16) // "QwtPolarRenderer"
-
+        QT_MOC_LITERAL(0, 16)   // "QwtPolarRenderer"
     },
     "QwtPolarRenderer"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_QwtPolarRenderer[] = {
+Q_CONSTINIT static const uint qt_meta_data_QwtPolarRenderer[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        0,    0, // methods
@@ -54,23 +56,26 @@ static const uint qt_meta_data_QwtPolarRenderer[] = {
        0        // eod
 };
 
-void QwtPolarRenderer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
-{
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
-}
-
-QT_INIT_METAOBJECT const QMetaObject QwtPolarRenderer::staticMetaObject = { {
-    &QObject::staticMetaObject,
-    qt_meta_stringdata_QwtPolarRenderer.data,
+Q_CONSTINIT const QMetaObject QwtPolarRenderer::staticMetaObject = { {
+    QMetaObject::SuperData::link<QObject::staticMetaObject>(),
+    qt_meta_stringdata_QwtPolarRenderer.offsetsAndSizes,
     qt_meta_data_QwtPolarRenderer,
     qt_static_metacall,
     nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_QwtPolarRenderer_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<QwtPolarRenderer, std::true_type>
+    >,
     nullptr
 } };
 
+void QwtPolarRenderer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    (void)_o;
+    (void)_id;
+    (void)_c;
+    (void)_a;
+}
 
 const QMetaObject *QwtPolarRenderer::metaObject() const
 {

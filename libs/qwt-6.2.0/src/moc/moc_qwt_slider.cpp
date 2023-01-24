@@ -1,82 +1,105 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qwt_slider.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../qwt_slider.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qwt_slider.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_QwtSlider_t {
-    QByteArrayData data[13];
-    char stringdata0[146];
+    uint offsetsAndSizes[26];
+    char stringdata0[10];
+    char stringdata1[12];
+    char stringdata2[16];
+    char stringdata3[14];
+    char stringdata4[14];
+    char stringdata5[7];
+    char stringdata6[7];
+    char stringdata7[11];
+    char stringdata8[12];
+    char stringdata9[8];
+    char stringdata10[8];
+    char stringdata11[13];
+    char stringdata12[14];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QwtSlider_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_QwtSlider_t qt_meta_stringdata_QwtSlider = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_QwtSlider_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_QwtSlider_t qt_meta_stringdata_QwtSlider = {
     {
-QT_MOC_LITERAL(0, 0, 9), // "QwtSlider"
-QT_MOC_LITERAL(1, 10, 11), // "orientation"
-QT_MOC_LITERAL(2, 22, 15), // "Qt::Orientation"
-QT_MOC_LITERAL(3, 38, 13), // "scalePosition"
-QT_MOC_LITERAL(4, 52, 13), // "ScalePosition"
-QT_MOC_LITERAL(5, 66, 6), // "trough"
-QT_MOC_LITERAL(6, 73, 6), // "groove"
-QT_MOC_LITERAL(7, 80, 10), // "handleSize"
-QT_MOC_LITERAL(8, 91, 11), // "borderWidth"
-QT_MOC_LITERAL(9, 103, 7), // "spacing"
-QT_MOC_LITERAL(10, 111, 7), // "NoScale"
-QT_MOC_LITERAL(11, 119, 12), // "LeadingScale"
-QT_MOC_LITERAL(12, 132, 13) // "TrailingScale"
-
+        QT_MOC_LITERAL(0, 9),  // "QwtSlider"
+        QT_MOC_LITERAL(10, 11),  // "orientation"
+        QT_MOC_LITERAL(22, 15),  // "Qt::Orientation"
+        QT_MOC_LITERAL(38, 13),  // "scalePosition"
+        QT_MOC_LITERAL(52, 13),  // "ScalePosition"
+        QT_MOC_LITERAL(66, 6),  // "trough"
+        QT_MOC_LITERAL(73, 6),  // "groove"
+        QT_MOC_LITERAL(80, 10),  // "handleSize"
+        QT_MOC_LITERAL(91, 11),  // "borderWidth"
+        QT_MOC_LITERAL(103, 7),  // "spacing"
+        QT_MOC_LITERAL(111, 7),  // "NoScale"
+        QT_MOC_LITERAL(119, 12),  // "LeadingScale"
+        QT_MOC_LITERAL(132, 13)   // "TrailingScale"
     },
-    "QwtSlider\0orientation\0Qt::Orientation\0"
-    "scalePosition\0ScalePosition\0trough\0"
-    "groove\0handleSize\0borderWidth\0spacing\0"
-    "NoScale\0LeadingScale\0TrailingScale"
+    "QwtSlider",
+    "orientation",
+    "Qt::Orientation",
+    "scalePosition",
+    "ScalePosition",
+    "trough",
+    "groove",
+    "handleSize",
+    "borderWidth",
+    "spacing",
+    "NoScale",
+    "LeadingScale",
+    "TrailingScale"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_QwtSlider[] = {
+Q_CONSTINIT static const uint qt_meta_data_QwtSlider[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        0,    0, // methods
        7,   14, // properties
-       1,   35, // enums/sets
+       1,   49, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
  // properties: name, type, flags
-       1, 0x80000000 | 2, 0x0009510b,
-       3, 0x80000000 | 4, 0x0009510b,
-       5, QMetaType::Bool, 0x00095103,
-       6, QMetaType::Bool, 0x00095103,
-       7, QMetaType::QSize, 0x00095103,
-       8, QMetaType::Int, 0x00095103,
-       9, QMetaType::Int, 0x00095103,
+       1, 0x80000000 | 2, 0x0001510b, uint(-1), 0,
+       3, 0x80000000 | 4, 0x0001510b, uint(-1), 0,
+       5, QMetaType::Bool, 0x00015103, uint(-1), 0,
+       6, QMetaType::Bool, 0x00015103, uint(-1), 0,
+       7, QMetaType::QSize, 0x00015103, uint(-1), 0,
+       8, QMetaType::Int, 0x00015103, uint(-1), 0,
+       9, QMetaType::Int, 0x00015103, uint(-1), 0,
 
  // enums: name, alias, flags, count, data
-       4,    4, 0x0,    3,   40,
+       4,    4, 0x0,    3,   54,
 
  // enum data: key, value
       10, uint(QwtSlider::NoScale),
@@ -86,13 +109,38 @@ static const uint qt_meta_data_QwtSlider[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject QwtSlider::staticMetaObject = { {
+    QMetaObject::SuperData::link<QwtAbstractSlider::staticMetaObject>(),
+    qt_meta_stringdata_QwtSlider.offsetsAndSizes,
+    qt_meta_data_QwtSlider,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_QwtSlider_t,
+        // property 'orientation'
+        QtPrivate::TypeAndForceComplete<Qt::Orientation, std::true_type>,
+        // property 'scalePosition'
+        QtPrivate::TypeAndForceComplete<ScalePosition, std::true_type>,
+        // property 'trough'
+        QtPrivate::TypeAndForceComplete<bool, std::true_type>,
+        // property 'groove'
+        QtPrivate::TypeAndForceComplete<bool, std::true_type>,
+        // property 'handleSize'
+        QtPrivate::TypeAndForceComplete<QSize, std::true_type>,
+        // property 'borderWidth'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
+        // property 'spacing'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<QwtSlider, std::true_type>
+    >,
+    nullptr
+} };
+
 void QwtSlider::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-
-#ifndef QT_NO_PROPERTIES
-    if (_c == QMetaObject::ReadProperty) {
+if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<QwtSlider *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< Qt::Orientation*>(_v) = _t->orientation(); break;
@@ -106,7 +154,7 @@ void QwtSlider::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         }
     } else if (_c == QMetaObject::WriteProperty) {
         auto *_t = static_cast<QwtSlider *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->setOrientation(*reinterpret_cast< Qt::Orientation*>(_v)); break;
@@ -119,23 +167,13 @@ void QwtSlider::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
+    } else if (_c == QMetaObject::BindableProperty) {
     }
-#endif // QT_NO_PROPERTIES
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
+    (void)_o;
+    (void)_id;
+    (void)_c;
+    (void)_a;
 }
-
-QT_INIT_METAOBJECT const QMetaObject QwtSlider::staticMetaObject = { {
-    &QwtAbstractSlider::staticMetaObject,
-    qt_meta_stringdata_QwtSlider.data,
-    qt_meta_data_QwtSlider,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *QwtSlider::metaObject() const
 {
@@ -155,24 +193,12 @@ int QwtSlider::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QwtAbstractSlider::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
-    
-#ifndef QT_NO_PROPERTIES
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
-            || _c == QMetaObject::ResetProperty || _c == QMetaObject::RegisterPropertyMetaType) {
+            || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
+            || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
         _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 7;
     }
-#endif // QT_NO_PROPERTIES
     return _id;
 }
 QT_WARNING_POP

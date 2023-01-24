@@ -1,51 +1,61 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qwt_plot_panner.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../qwt_plot_panner.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qwt_plot_panner.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_QwtPlotPanner_t {
-    QByteArrayData data[5];
-    char stringdata0[32];
+    uint offsetsAndSizes[10];
+    char stringdata0[14];
+    char stringdata1[11];
+    char stringdata2[1];
+    char stringdata3[3];
+    char stringdata4[3];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QwtPlotPanner_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_QwtPlotPanner_t qt_meta_stringdata_QwtPlotPanner = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_QwtPlotPanner_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_QwtPlotPanner_t qt_meta_stringdata_QwtPlotPanner = {
     {
-QT_MOC_LITERAL(0, 0, 13), // "QwtPlotPanner"
-QT_MOC_LITERAL(1, 14, 10), // "moveCanvas"
-QT_MOC_LITERAL(2, 25, 0), // ""
-QT_MOC_LITERAL(3, 26, 2), // "dx"
-QT_MOC_LITERAL(4, 29, 2) // "dy"
-
+        QT_MOC_LITERAL(0, 13),  // "QwtPlotPanner"
+        QT_MOC_LITERAL(14, 10),  // "moveCanvas"
+        QT_MOC_LITERAL(25, 0),  // ""
+        QT_MOC_LITERAL(26, 2),  // "dx"
+        QT_MOC_LITERAL(29, 2)   // "dy"
     },
-    "QwtPlotPanner\0moveCanvas\0\0dx\0dy"
+    "QwtPlotPanner",
+    "moveCanvas",
+    "",
+    "dx",
+    "dy"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_QwtPlotPanner[] = {
+Q_CONSTINIT static const uint qt_meta_data_QwtPlotPanner[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        1,   14, // methods
@@ -55,8 +65,8 @@ static const uint qt_meta_data_QwtPlotPanner[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags
-       1,    2,   19,    2, 0x0a /* Public */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    2,   20,    2, 0x0a,    1 /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
@@ -64,27 +74,34 @@ static const uint qt_meta_data_QwtPlotPanner[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject QwtPlotPanner::staticMetaObject = { {
+    QMetaObject::SuperData::link<QwtPanner::staticMetaObject>(),
+    qt_meta_stringdata_QwtPlotPanner.offsetsAndSizes,
+    qt_meta_data_QwtPlotPanner,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_QwtPlotPanner_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<QwtPlotPanner, std::true_type>,
+        // method 'moveCanvas'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>
+    >,
+    nullptr
+} };
+
 void QwtPlotPanner::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<QwtPlotPanner *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
-        case 0: _t->moveCanvas((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 0: _t->moveCanvas((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }
     }
 }
-
-QT_INIT_METAOBJECT const QMetaObject QwtPlotPanner::staticMetaObject = { {
-    &QwtPanner::staticMetaObject,
-    qt_meta_stringdata_QwtPlotPanner.data,
-    qt_meta_data_QwtPlotPanner,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *QwtPlotPanner::metaObject() const
 {
@@ -110,7 +127,7 @@ int QwtPlotPanner::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 1;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 1)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 1;
     }
     return _id;

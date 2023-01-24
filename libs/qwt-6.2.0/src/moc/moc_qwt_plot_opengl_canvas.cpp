@@ -1,81 +1,106 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qwt_plot_opengl_canvas.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../qwt_plot_opengl_canvas.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qwt_plot_opengl_canvas.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_QwtPlotOpenGLCanvas_t {
-    QByteArrayData data[15];
-    char stringdata0[184];
+    uint offsetsAndSizes[30];
+    char stringdata0[20];
+    char stringdata1[7];
+    char stringdata2[1];
+    char stringdata3[23];
+    char stringdata4[11];
+    char stringdata5[13];
+    char stringdata6[12];
+    char stringdata7[15];
+    char stringdata8[11];
+    char stringdata9[14];
+    char stringdata10[10];
+    char stringdata11[13];
+    char stringdata12[11];
+    char stringdata13[10];
+    char stringdata14[13];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QwtPlotOpenGLCanvas_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_QwtPlotOpenGLCanvas_t qt_meta_stringdata_QwtPlotOpenGLCanvas = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_QwtPlotOpenGLCanvas_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_QwtPlotOpenGLCanvas_t qt_meta_stringdata_QwtPlotOpenGLCanvas = {
     {
-QT_MOC_LITERAL(0, 0, 19), // "QwtPlotOpenGLCanvas"
-QT_MOC_LITERAL(1, 20, 6), // "replot"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 22), // "invalidateBackingStore"
-QT_MOC_LITERAL(4, 51, 10), // "borderPath"
-QT_MOC_LITERAL(5, 62, 12), // "QPainterPath"
-QT_MOC_LITERAL(6, 75, 11), // "frameShadow"
-QT_MOC_LITERAL(7, 87, 14), // "QFrame::Shadow"
-QT_MOC_LITERAL(8, 102, 10), // "frameShape"
-QT_MOC_LITERAL(9, 113, 13), // "QFrame::Shape"
-QT_MOC_LITERAL(10, 127, 9), // "lineWidth"
-QT_MOC_LITERAL(11, 137, 12), // "midLineWidth"
-QT_MOC_LITERAL(12, 150, 10), // "frameWidth"
-QT_MOC_LITERAL(13, 161, 9), // "frameRect"
-QT_MOC_LITERAL(14, 171, 12) // "borderRadius"
-
+        QT_MOC_LITERAL(0, 19),  // "QwtPlotOpenGLCanvas"
+        QT_MOC_LITERAL(20, 6),  // "replot"
+        QT_MOC_LITERAL(27, 0),  // ""
+        QT_MOC_LITERAL(28, 22),  // "invalidateBackingStore"
+        QT_MOC_LITERAL(51, 10),  // "borderPath"
+        QT_MOC_LITERAL(62, 12),  // "QPainterPath"
+        QT_MOC_LITERAL(75, 11),  // "frameShadow"
+        QT_MOC_LITERAL(87, 14),  // "QFrame::Shadow"
+        QT_MOC_LITERAL(102, 10),  // "frameShape"
+        QT_MOC_LITERAL(113, 13),  // "QFrame::Shape"
+        QT_MOC_LITERAL(127, 9),  // "lineWidth"
+        QT_MOC_LITERAL(137, 12),  // "midLineWidth"
+        QT_MOC_LITERAL(150, 10),  // "frameWidth"
+        QT_MOC_LITERAL(161, 9),  // "frameRect"
+        QT_MOC_LITERAL(171, 12)   // "borderRadius"
     },
-    "QwtPlotOpenGLCanvas\0replot\0\0"
-    "invalidateBackingStore\0borderPath\0"
-    "QPainterPath\0frameShadow\0QFrame::Shadow\0"
-    "frameShape\0QFrame::Shape\0lineWidth\0"
-    "midLineWidth\0frameWidth\0frameRect\0"
+    "QwtPlotOpenGLCanvas",
+    "replot",
+    "",
+    "invalidateBackingStore",
+    "borderPath",
+    "QPainterPath",
+    "frameShadow",
+    "QFrame::Shadow",
+    "frameShape",
+    "QFrame::Shape",
+    "lineWidth",
+    "midLineWidth",
+    "frameWidth",
+    "frameRect",
     "borderRadius"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_QwtPlotOpenGLCanvas[] = {
+Q_CONSTINIT static const uint qt_meta_data_QwtPlotOpenGLCanvas[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
-       7,   34, // properties
+       7,   37, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags
-       1,    0,   29,    2, 0x0a /* Public */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   32,    2, 0x0a,    8 /* Public */,
 
- // methods: name, argc, parameters, tag, flags
-       3,    0,   30,    2, 0x02 /* Public */,
-       4,    1,   31,    2, 0x02 /* Public */,
+ // methods: name, argc, parameters, tag, flags, initial metatype offsets
+       3,    0,   33,    2, 0x02,    9 /* Public */,
+       4,    1,   34,    2, 0x102,   10 /* Public | MethodIsConst  */,
 
  // slots: parameters
     QMetaType::Void,
@@ -85,34 +110,71 @@ static const uint qt_meta_data_QwtPlotOpenGLCanvas[] = {
     0x80000000 | 5, QMetaType::QRect,    2,
 
  // properties: name, type, flags
-       6, 0x80000000 | 7, 0x0009510b,
-       8, 0x80000000 | 9, 0x0009510b,
-      10, QMetaType::Int, 0x00095103,
-      11, QMetaType::Int, 0x00095103,
-      12, QMetaType::Int, 0x00095001,
-      13, QMetaType::QRect, 0x00094001,
-      14, QMetaType::Double, 0x00095103,
+       6, 0x80000000 | 7, 0x0001510b, uint(-1), 0,
+       8, 0x80000000 | 9, 0x0001510b, uint(-1), 0,
+      10, QMetaType::Int, 0x00015103, uint(-1), 0,
+      11, QMetaType::Int, 0x00015103, uint(-1), 0,
+      12, QMetaType::Int, 0x00015001, uint(-1), 0,
+      13, QMetaType::QRect, 0x00014001, uint(-1), 0,
+      14, QMetaType::Double, 0x00015103, uint(-1), 0,
 
        0        // eod
 };
+
+Q_CONSTINIT static const QMetaObject::SuperData qt_meta_extradata_QwtPlotOpenGLCanvas[] = {
+    QMetaObject::SuperData::link<QFrame::staticMetaObject>(),
+    nullptr
+};
+
+Q_CONSTINIT const QMetaObject QwtPlotOpenGLCanvas::staticMetaObject = { {
+    QMetaObject::SuperData::link<QOpenGLWidget::staticMetaObject>(),
+    qt_meta_stringdata_QwtPlotOpenGLCanvas.offsetsAndSizes,
+    qt_meta_data_QwtPlotOpenGLCanvas,
+    qt_static_metacall,
+    qt_meta_extradata_QwtPlotOpenGLCanvas,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_QwtPlotOpenGLCanvas_t,
+        // property 'frameShadow'
+        QtPrivate::TypeAndForceComplete<QFrame::Shadow, std::true_type>,
+        // property 'frameShape'
+        QtPrivate::TypeAndForceComplete<QFrame::Shape, std::true_type>,
+        // property 'lineWidth'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
+        // property 'midLineWidth'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
+        // property 'frameWidth'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
+        // property 'frameRect'
+        QtPrivate::TypeAndForceComplete<QRect, std::true_type>,
+        // property 'borderRadius'
+        QtPrivate::TypeAndForceComplete<double, std::true_type>,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<QwtPlotOpenGLCanvas, std::true_type>,
+        // method 'replot'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'invalidateBackingStore'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'borderPath'
+        QtPrivate::TypeAndForceComplete<QPainterPath, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QRect &, std::false_type>
+    >,
+    nullptr
+} };
 
 void QwtPlotOpenGLCanvas::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<QwtPlotOpenGLCanvas *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
         case 0: _t->replot(); break;
         case 1: _t->invalidateBackingStore(); break;
-        case 2: { QPainterPath _r = _t->borderPath((*reinterpret_cast< const QRect(*)>(_a[1])));
+        case 2: { QPainterPath _r = _t->borderPath((*reinterpret_cast< std::add_pointer_t<QRect>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QPainterPath*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
-    }
-#ifndef QT_NO_PROPERTIES
-    else if (_c == QMetaObject::ReadProperty) {
+    }else if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<QwtPlotOpenGLCanvas *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< QFrame::Shadow*>(_v) = _t->frameShadow(); break;
@@ -126,7 +188,7 @@ void QwtPlotOpenGLCanvas::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         }
     } else if (_c == QMetaObject::WriteProperty) {
         auto *_t = static_cast<QwtPlotOpenGLCanvas *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->setFrameShadow(*reinterpret_cast< QFrame::Shadow*>(_v)); break;
@@ -137,24 +199,9 @@ void QwtPlotOpenGLCanvas::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
+    } else if (_c == QMetaObject::BindableProperty) {
     }
-#endif // QT_NO_PROPERTIES
 }
-
-static const QMetaObject * const qt_meta_extradata_QwtPlotOpenGLCanvas[] = {
-        &QFrame::staticMetaObject,
-    nullptr
-};
-
-QT_INIT_METAOBJECT const QMetaObject QwtPlotOpenGLCanvas::staticMetaObject = { {
-    &QOpenGLWidget::staticMetaObject,
-    qt_meta_stringdata_QwtPlotOpenGLCanvas.data,
-    qt_meta_data_QwtPlotOpenGLCanvas,
-    qt_static_metacall,
-    qt_meta_extradata_QwtPlotOpenGLCanvas,
-    nullptr
-} };
-
 
 const QMetaObject *QwtPlotOpenGLCanvas::metaObject() const
 {
@@ -182,26 +229,14 @@ int QwtPlotOpenGLCanvas::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 3)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 3;
-    }
-#ifndef QT_NO_PROPERTIES
-    else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
-            || _c == QMetaObject::ResetProperty || _c == QMetaObject::RegisterPropertyMetaType) {
+    }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
+            || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
+            || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
         _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 7;
-    } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 7;
     }
-#endif // QT_NO_PROPERTIES
     return _id;
 }
 QT_WARNING_POP

@@ -100,8 +100,8 @@ void MainWindow::enableMagnifier()
     QwtPlotMagnifier *magnifierPlotBr =
             new QwtPlotMagnifier(ui -> qwtPlotBright -> canvas());
     // zoom button
-    magnifierPlot -> setMouseButton(Qt::MidButton);
-    magnifierPlotBr -> setMouseButton(Qt::MidButton);
+    magnifierPlot -> setMouseButton(Qt::MiddleButton);
+    magnifierPlotBr -> setMouseButton(Qt::MiddleButton);
 }
 
 void MainWindow::enableMovingOnPlot()

@@ -1,83 +1,108 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qwt_dial.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../qwt_dial.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qwt_dial.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_QwtDial_t {
-    QByteArrayData data[14];
-    char stringdata0[123];
+    uint offsetsAndSizes[28];
+    char stringdata0[8];
+    char stringdata1[10];
+    char stringdata2[12];
+    char stringdata3[7];
+    char stringdata4[5];
+    char stringdata5[5];
+    char stringdata6[7];
+    char stringdata7[12];
+    char stringdata8[12];
+    char stringdata9[6];
+    char stringdata10[7];
+    char stringdata11[7];
+    char stringdata12[13];
+    char stringdata13[12];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QwtDial_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_QwtDial_t qt_meta_stringdata_QwtDial = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_QwtDial_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_QwtDial_t qt_meta_stringdata_QwtDial = {
     {
-QT_MOC_LITERAL(0, 0, 7), // "QwtDial"
-QT_MOC_LITERAL(1, 8, 9), // "lineWidth"
-QT_MOC_LITERAL(2, 18, 11), // "frameShadow"
-QT_MOC_LITERAL(3, 30, 6), // "Shadow"
-QT_MOC_LITERAL(4, 37, 4), // "mode"
-QT_MOC_LITERAL(5, 42, 4), // "Mode"
-QT_MOC_LITERAL(6, 47, 6), // "origin"
-QT_MOC_LITERAL(7, 54, 11), // "minScaleArc"
-QT_MOC_LITERAL(8, 66, 11), // "maxScaleArc"
-QT_MOC_LITERAL(9, 78, 5), // "Plain"
-QT_MOC_LITERAL(10, 84, 6), // "Raised"
-QT_MOC_LITERAL(11, 91, 6), // "Sunken"
-QT_MOC_LITERAL(12, 98, 12), // "RotateNeedle"
-QT_MOC_LITERAL(13, 111, 11) // "RotateScale"
-
+        QT_MOC_LITERAL(0, 7),  // "QwtDial"
+        QT_MOC_LITERAL(8, 9),  // "lineWidth"
+        QT_MOC_LITERAL(18, 11),  // "frameShadow"
+        QT_MOC_LITERAL(30, 6),  // "Shadow"
+        QT_MOC_LITERAL(37, 4),  // "mode"
+        QT_MOC_LITERAL(42, 4),  // "Mode"
+        QT_MOC_LITERAL(47, 6),  // "origin"
+        QT_MOC_LITERAL(54, 11),  // "minScaleArc"
+        QT_MOC_LITERAL(66, 11),  // "maxScaleArc"
+        QT_MOC_LITERAL(78, 5),  // "Plain"
+        QT_MOC_LITERAL(84, 6),  // "Raised"
+        QT_MOC_LITERAL(91, 6),  // "Sunken"
+        QT_MOC_LITERAL(98, 12),  // "RotateNeedle"
+        QT_MOC_LITERAL(111, 11)   // "RotateScale"
     },
-    "QwtDial\0lineWidth\0frameShadow\0Shadow\0"
-    "mode\0Mode\0origin\0minScaleArc\0maxScaleArc\0"
-    "Plain\0Raised\0Sunken\0RotateNeedle\0"
+    "QwtDial",
+    "lineWidth",
+    "frameShadow",
+    "Shadow",
+    "mode",
+    "Mode",
+    "origin",
+    "minScaleArc",
+    "maxScaleArc",
+    "Plain",
+    "Raised",
+    "Sunken",
+    "RotateNeedle",
     "RotateScale"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_QwtDial[] = {
+Q_CONSTINIT static const uint qt_meta_data_QwtDial[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        0,    0, // methods
        6,   14, // properties
-       2,   32, // enums/sets
+       2,   44, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
  // properties: name, type, flags
-       1, QMetaType::Int, 0x00095103,
-       2, 0x80000000 | 3, 0x0009510b,
-       4, 0x80000000 | 5, 0x0009510b,
-       6, QMetaType::Double, 0x00095103,
-       7, QMetaType::Double, 0x00095103,
-       8, QMetaType::Double, 0x00095103,
+       1, QMetaType::Int, 0x00015103, uint(-1), 0,
+       2, 0x80000000 | 3, 0x0001510b, uint(-1), 0,
+       4, 0x80000000 | 5, 0x0001510b, uint(-1), 0,
+       6, QMetaType::Double, 0x00015103, uint(-1), 0,
+       7, QMetaType::Double, 0x00015103, uint(-1), 0,
+       8, QMetaType::Double, 0x00015103, uint(-1), 0,
 
  // enums: name, alias, flags, count, data
-       3,    3, 0x0,    3,   42,
-       5,    5, 0x0,    2,   48,
+       3,    3, 0x0,    3,   54,
+       5,    5, 0x0,    2,   60,
 
  // enum data: key, value
        9, uint(QwtDial::Plain),
@@ -89,13 +114,36 @@ static const uint qt_meta_data_QwtDial[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject QwtDial::staticMetaObject = { {
+    QMetaObject::SuperData::link<QwtAbstractSlider::staticMetaObject>(),
+    qt_meta_stringdata_QwtDial.offsetsAndSizes,
+    qt_meta_data_QwtDial,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_QwtDial_t,
+        // property 'lineWidth'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
+        // property 'frameShadow'
+        QtPrivate::TypeAndForceComplete<Shadow, std::true_type>,
+        // property 'mode'
+        QtPrivate::TypeAndForceComplete<Mode, std::true_type>,
+        // property 'origin'
+        QtPrivate::TypeAndForceComplete<double, std::true_type>,
+        // property 'minScaleArc'
+        QtPrivate::TypeAndForceComplete<double, std::true_type>,
+        // property 'maxScaleArc'
+        QtPrivate::TypeAndForceComplete<double, std::true_type>,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<QwtDial, std::true_type>
+    >,
+    nullptr
+} };
+
 void QwtDial::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-
-#ifndef QT_NO_PROPERTIES
-    if (_c == QMetaObject::ReadProperty) {
+if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<QwtDial *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< int*>(_v) = _t->lineWidth(); break;
@@ -108,7 +156,7 @@ void QwtDial::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         }
     } else if (_c == QMetaObject::WriteProperty) {
         auto *_t = static_cast<QwtDial *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->setLineWidth(*reinterpret_cast< int*>(_v)); break;
@@ -120,23 +168,13 @@ void QwtDial::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
+    } else if (_c == QMetaObject::BindableProperty) {
     }
-#endif // QT_NO_PROPERTIES
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
+    (void)_o;
+    (void)_id;
+    (void)_c;
+    (void)_a;
 }
-
-QT_INIT_METAOBJECT const QMetaObject QwtDial::staticMetaObject = { {
-    &QwtAbstractSlider::staticMetaObject,
-    qt_meta_stringdata_QwtDial.data,
-    qt_meta_data_QwtDial,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *QwtDial::metaObject() const
 {
@@ -156,24 +194,12 @@ int QwtDial::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QwtAbstractSlider::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
-    
-#ifndef QT_NO_PROPERTIES
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
-            || _c == QMetaObject::ResetProperty || _c == QMetaObject::RegisterPropertyMetaType) {
+            || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
+            || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
         _id -= 6;
-    } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 6;
-    } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 6;
-    } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 6;
-    } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 6;
-    } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 6;
     }
-#endif // QT_NO_PROPERTIES
     return _id;
 }
 QT_WARNING_POP

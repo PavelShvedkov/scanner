@@ -1,52 +1,64 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qwt_panner.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../qwt_panner.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qwt_panner.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_QwtPanner_t {
-    QByteArrayData data[6];
-    char stringdata0[30];
+    uint offsetsAndSizes[12];
+    char stringdata0[10];
+    char stringdata1[7];
+    char stringdata2[1];
+    char stringdata3[3];
+    char stringdata4[3];
+    char stringdata5[6];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QwtPanner_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_QwtPanner_t qt_meta_stringdata_QwtPanner = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_QwtPanner_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_QwtPanner_t qt_meta_stringdata_QwtPanner = {
     {
-QT_MOC_LITERAL(0, 0, 9), // "QwtPanner"
-QT_MOC_LITERAL(1, 10, 6), // "panned"
-QT_MOC_LITERAL(2, 17, 0), // ""
-QT_MOC_LITERAL(3, 18, 2), // "dx"
-QT_MOC_LITERAL(4, 21, 2), // "dy"
-QT_MOC_LITERAL(5, 24, 5) // "moved"
-
+        QT_MOC_LITERAL(0, 9),  // "QwtPanner"
+        QT_MOC_LITERAL(10, 6),  // "panned"
+        QT_MOC_LITERAL(17, 0),  // ""
+        QT_MOC_LITERAL(18, 2),  // "dx"
+        QT_MOC_LITERAL(21, 2),  // "dy"
+        QT_MOC_LITERAL(24, 5)   // "moved"
     },
-    "QwtPanner\0panned\0\0dx\0dy\0moved"
+    "QwtPanner",
+    "panned",
+    "",
+    "dx",
+    "dy",
+    "moved"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_QwtPanner[] = {
+Q_CONSTINIT static const uint qt_meta_data_QwtPanner[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        2,   14, // methods
@@ -56,9 +68,9 @@ static const uint qt_meta_data_QwtPanner[] = {
        0,       // flags
        2,       // signalCount
 
- // signals: name, argc, parameters, tag, flags
-       1,    2,   24,    2, 0x06 /* Public */,
-       5,    2,   29,    2, 0x06 /* Public */,
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    2,   26,    2, 0x06,    1 /* Public */,
+       5,    2,   31,    2, 0x06,    4 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
@@ -67,44 +79,55 @@ static const uint qt_meta_data_QwtPanner[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject QwtPanner::staticMetaObject = { {
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    qt_meta_stringdata_QwtPanner.offsetsAndSizes,
+    qt_meta_data_QwtPanner,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_QwtPanner_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<QwtPanner, std::true_type>,
+        // method 'panned'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'moved'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>
+    >,
+    nullptr
+} };
+
 void QwtPanner::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<QwtPanner *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
-        case 0: _t->panned((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 1: _t->moved((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 0: _t->panned((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 1: _t->moved((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (QwtPanner::*)(int , int );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&QwtPanner::panned)) {
+            if (_t _q_method = &QwtPanner::panned; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
         {
             using _t = void (QwtPanner::*)(int , int );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&QwtPanner::moved)) {
+            if (_t _q_method = &QwtPanner::moved; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
         }
     }
 }
-
-QT_INIT_METAOBJECT const QMetaObject QwtPanner::staticMetaObject = { {
-    &QWidget::staticMetaObject,
-    qt_meta_stringdata_QwtPanner.data,
-    qt_meta_data_QwtPanner,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *QwtPanner::metaObject() const
 {
@@ -130,7 +153,7 @@ int QwtPanner::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 2)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 2;
     }
     return _id;
@@ -139,14 +162,14 @@ int QwtPanner::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void QwtPanner::panned(int _t1, int _t2)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1
 void QwtPanner::moved(int _t1, int _t2)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 QT_WARNING_POP

@@ -1,53 +1,64 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'TransformPlot.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../TransformPlot.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'TransformPlot.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_TransformPlot_t {
-    QByteArrayData data[6];
-    char stringdata0[55];
+    uint offsetsAndSizes[12];
+    char stringdata0[14];
+    char stringdata1[9];
+    char stringdata2[1];
+    char stringdata3[14];
+    char stringdata4[14];
+    char stringdata5[3];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_TransformPlot_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_TransformPlot_t qt_meta_stringdata_TransformPlot = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_TransformPlot_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_TransformPlot_t qt_meta_stringdata_TransformPlot = {
     {
-QT_MOC_LITERAL(0, 0, 13), // "TransformPlot"
-QT_MOC_LITERAL(1, 14, 8), // "selected"
-QT_MOC_LITERAL(2, 23, 0), // ""
-QT_MOC_LITERAL(3, 24, 13), // "QwtTransform*"
-QT_MOC_LITERAL(4, 38, 13), // "legendChecked"
-QT_MOC_LITERAL(5, 52, 2) // "on"
-
+        QT_MOC_LITERAL(0, 13),  // "TransformPlot"
+        QT_MOC_LITERAL(14, 8),  // "selected"
+        QT_MOC_LITERAL(23, 0),  // ""
+        QT_MOC_LITERAL(24, 13),  // "QwtTransform*"
+        QT_MOC_LITERAL(38, 13),  // "legendChecked"
+        QT_MOC_LITERAL(52, 2)   // "on"
     },
-    "TransformPlot\0selected\0\0QwtTransform*\0"
-    "legendChecked\0on"
+    "TransformPlot",
+    "selected",
+    "",
+    "QwtTransform*",
+    "legendChecked",
+    "on"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_TransformPlot[] = {
+Q_CONSTINIT static const uint qt_meta_data_TransformPlot[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        2,   14, // methods
@@ -57,11 +68,11 @@ static const uint qt_meta_data_TransformPlot[] = {
        0,       // flags
        1,       // signalCount
 
- // signals: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x06 /* Public */,
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   26,    2, 0x06,    1 /* Public */,
 
- // slots: name, argc, parameters, tag, flags
-       4,    2,   27,    2, 0x08 /* Private */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       4,    2,   29,    2, 0x08,    3 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    2,
@@ -72,37 +83,47 @@ static const uint qt_meta_data_TransformPlot[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject TransformPlot::staticMetaObject = { {
+    QMetaObject::SuperData::link<QwtPlot::staticMetaObject>(),
+    qt_meta_stringdata_TransformPlot.offsetsAndSizes,
+    qt_meta_data_TransformPlot,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_TransformPlot_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<TransformPlot, std::true_type>,
+        // method 'selected'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QwtTransform *, std::false_type>,
+        // method 'legendChecked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QVariant &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>
+    >,
+    nullptr
+} };
+
 void TransformPlot::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<TransformPlot *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
-        case 0: _t->selected((*reinterpret_cast< QwtTransform*(*)>(_a[1]))); break;
-        case 1: _t->legendChecked((*reinterpret_cast< const QVariant(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+        case 0: _t->selected((*reinterpret_cast< std::add_pointer_t<QwtTransform*>>(_a[1]))); break;
+        case 1: _t->legendChecked((*reinterpret_cast< std::add_pointer_t<QVariant>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (TransformPlot::*)(QwtTransform * );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&TransformPlot::selected)) {
+            if (_t _q_method = &TransformPlot::selected; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
     }
 }
-
-QT_INIT_METAOBJECT const QMetaObject TransformPlot::staticMetaObject = { {
-    &QwtPlot::staticMetaObject,
-    qt_meta_stringdata_TransformPlot.data,
-    qt_meta_data_TransformPlot,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *TransformPlot::metaObject() const
 {
@@ -128,7 +149,7 @@ int TransformPlot::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 2)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 2;
     }
     return _id;
@@ -137,7 +158,7 @@ int TransformPlot::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void TransformPlot::selected(QwtTransform * _t1)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

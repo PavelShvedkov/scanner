@@ -1,59 +1,79 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'Plot.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../Plot.h"
-#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'Plot.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.12.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
+#endif
+
+#ifndef Q_CONSTINIT
+#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+namespace {
 struct qt_meta_stringdata_Plot_t {
-    QByteArrayData data[11];
-    char stringdata0[102];
+    uint offsetsAndSizes[22];
+    char stringdata0[5];
+    char stringdata1[9];
+    char stringdata2[1];
+    char stringdata3[7];
+    char stringdata4[12];
+    char stringdata5[3];
+    char stringdata6[16];
+    char stringdata7[12];
+    char stringdata8[18];
+    char stringdata9[9];
+    char stringdata10[10];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Plot_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_Plot_t qt_meta_stringdata_Plot = {
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(sizeof(qt_meta_stringdata_Plot_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_Plot_t qt_meta_stringdata_Plot = {
     {
-QT_MOC_LITERAL(0, 0, 4), // "Plot"
-QT_MOC_LITERAL(1, 5, 8), // "rendered"
-QT_MOC_LITERAL(2, 14, 0), // ""
-QT_MOC_LITERAL(3, 15, 6), // "status"
-QT_MOC_LITERAL(4, 22, 11), // "showContour"
-QT_MOC_LITERAL(5, 34, 2), // "on"
-QT_MOC_LITERAL(6, 37, 15), // "showSpectrogram"
-QT_MOC_LITERAL(7, 53, 11), // "setColorMap"
-QT_MOC_LITERAL(8, 65, 17), // "setColorTableSize"
-QT_MOC_LITERAL(9, 83, 8), // "setAlpha"
-QT_MOC_LITERAL(10, 92, 9) // "printPlot"
-
+        QT_MOC_LITERAL(0, 4),  // "Plot"
+        QT_MOC_LITERAL(5, 8),  // "rendered"
+        QT_MOC_LITERAL(14, 0),  // ""
+        QT_MOC_LITERAL(15, 6),  // "status"
+        QT_MOC_LITERAL(22, 11),  // "showContour"
+        QT_MOC_LITERAL(34, 2),  // "on"
+        QT_MOC_LITERAL(37, 15),  // "showSpectrogram"
+        QT_MOC_LITERAL(53, 11),  // "setColorMap"
+        QT_MOC_LITERAL(65, 17),  // "setColorTableSize"
+        QT_MOC_LITERAL(83, 8),  // "setAlpha"
+        QT_MOC_LITERAL(92, 9)   // "printPlot"
     },
-    "Plot\0rendered\0\0status\0showContour\0on\0"
-    "showSpectrogram\0setColorMap\0"
-    "setColorTableSize\0setAlpha\0printPlot"
+    "Plot",
+    "rendered",
+    "",
+    "status",
+    "showContour",
+    "on",
+    "showSpectrogram",
+    "setColorMap",
+    "setColorTableSize",
+    "setAlpha",
+    "printPlot"
 };
 #undef QT_MOC_LITERAL
+} // unnamed namespace
 
-static const uint qt_meta_data_Plot[] = {
+Q_CONSTINIT static const uint qt_meta_data_Plot[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        7,   14, // methods
@@ -63,16 +83,16 @@ static const uint qt_meta_data_Plot[] = {
        0,       // flags
        1,       // signalCount
 
- // signals: name, argc, parameters, tag, flags
-       1,    1,   49,    2, 0x06 /* Public */,
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   56,    2, 0x06,    1 /* Public */,
 
- // slots: name, argc, parameters, tag, flags
-       4,    1,   52,    2, 0x0a /* Public */,
-       6,    1,   55,    2, 0x0a /* Public */,
-       7,    1,   58,    2, 0x0a /* Public */,
-       8,    1,   61,    2, 0x0a /* Public */,
-       9,    1,   64,    2, 0x0a /* Public */,
-      10,    0,   67,    2, 0x0a /* Public */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       4,    1,   59,    2, 0x0a,    3 /* Public */,
+       6,    1,   62,    2, 0x0a,    5 /* Public */,
+       7,    1,   65,    2, 0x0a,    7 /* Public */,
+       8,    1,   68,    2, 0x0a,    9 /* Public */,
+       9,    1,   71,    2, 0x0a,   11 /* Public */,
+      10,    0,   74,    2, 0x0a,   13 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -88,18 +108,51 @@ static const uint qt_meta_data_Plot[] = {
        0        // eod
 };
 
+Q_CONSTINIT const QMetaObject Plot::staticMetaObject = { {
+    QMetaObject::SuperData::link<QwtPlot::staticMetaObject>(),
+    qt_meta_stringdata_Plot.offsetsAndSizes,
+    qt_meta_data_Plot,
+    qt_static_metacall,
+    nullptr,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_Plot_t,
+        // Q_OBJECT / Q_GADGET
+        QtPrivate::TypeAndForceComplete<Plot, std::true_type>,
+        // method 'rendered'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'showContour'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'showSpectrogram'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'setColorMap'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'setColorTableSize'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'setAlpha'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'printPlot'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
+    >,
+    nullptr
+} };
+
 void Plot::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<Plot *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
-        case 0: _t->rendered((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 1: _t->showContour((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 2: _t->showSpectrogram((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 3: _t->setColorMap((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->setColorTableSize((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 5: _t->setAlpha((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 0: _t->rendered((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->showContour((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 2: _t->showSpectrogram((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 3: _t->setColorMap((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 4: _t->setColorTableSize((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 5: _t->setAlpha((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 6: _t->printPlot(); break;
         default: ;
         }
@@ -107,23 +160,13 @@ void Plot::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (Plot::*)(const QString & );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Plot::rendered)) {
+            if (_t _q_method = &Plot::rendered; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
     }
 }
-
-QT_INIT_METAOBJECT const QMetaObject Plot::staticMetaObject = { {
-    &QwtPlot::staticMetaObject,
-    qt_meta_stringdata_Plot.data,
-    qt_meta_data_Plot,
-    qt_static_metacall,
-    nullptr,
-    nullptr
-} };
-
 
 const QMetaObject *Plot::metaObject() const
 {
@@ -149,7 +192,7 @@ int Plot::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 7)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 7;
     }
     return _id;
@@ -158,7 +201,7 @@ int Plot::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void Plot::rendered(const QString & _t1)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP
