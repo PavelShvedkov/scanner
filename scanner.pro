@@ -25,15 +25,18 @@ SOURCES += \
     distributions.cpp \
     main.cpp \
     mainwindow.cpp \
+    noiseparamsdialog.cpp \
     profile.cpp
 
 HEADERS += \
     distributions.h \
     mainwindow.h \
+    noiseparamsdialog.h \
     profile.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    noiseparamsdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

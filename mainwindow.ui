@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>768</width>
-    <height>343</height>
+    <width>832</width>
+    <height>445</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -297,6 +297,20 @@
         </property>
        </widget>
       </item>
+      <item row="10" column="0" colspan="2">
+       <widget class="QPushButton" name="defaultButton">
+        <property name="text">
+         <string>Default</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0" colspan="2">
+       <widget class="QPushButton" name="noiseSetButton">
+        <property name="text">
+         <string>Noise setting</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
    </layout>
@@ -306,8 +320,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>768</width>
-     <height>22</height>
+     <width>832</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

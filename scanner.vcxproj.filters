@@ -46,6 +46,9 @@
     <ClCompile Include="mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="noiseparamsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="profile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -57,11 +60,16 @@
     <QtMoc Include="mainwindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="noiseparamsdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
     <ClInclude Include="profile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    
+    
     
     
     <CustomBuild Include="debug\moc_predefs.h.cbt">
@@ -71,9 +79,13 @@
       <Filter>Generated Files</Filter>
     </CustomBuild>
     
+    
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="noiseparamsdialog.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

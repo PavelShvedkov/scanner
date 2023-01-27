@@ -28,6 +28,7 @@
 #include <QTimer>
 
 #include "profile.h"
+#include "noiseparamsdialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,47 +36,58 @@ QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+	MainWindow(QWidget* parent = nullptr);
+	~MainWindow();
 
-    void setPlot();
-    void setPlotBright();
+	void setPlot();
+	void setPlotBright();
 
-    void setPlotGrid();
-    void setPlotBrightGrid();
+	void setPlotGrid();
+	void setPlotBrightGrid();
 
-    void setCurveParameters();
-    void setCurveBrightParameters();
+	void setCurveParameters();
+	void setCurveBrightParameters();
 
-    void addPointsToCurveAndShow(float x0, float y0);
+	void enableMagnifier();
+	void enableMovingOnPlot();
+	void enablePicker();
 
-    void enableMagnifier();
-    void enableMovingOnPlot();
-    void enablePicker();
+	QwtPlotCurve* curve;
+	QwtPlotCurve* brightCurve;
+	QPolygonF points;
+	QPolygonF brightPoints;
+	Profile profile;
+	Profile initProfile;
 
-    QwtPlotCurve *curve;
-    QwtPlotCurve *brightCurve;
-    QPolygonF points;
-    QPolygonF brightPoints;
-    Profile profile; //состояние на данные момент
-    Profile initProfile; //состояние при инициализации
+public slots:
+	void slotForNoiseParams(float, float);
+
+signals:
+	void sendCurrNoiseParamsSignal(float, float);
+
+private:
+	Ui::MainWindow* ui;
+	QTimer* timer;
+	NoiseParamsDialog* noiseDialog;
+
+	void setUiBoxes(int, float, float, float, float, float, float);
+
+	const float FRAME_STEP = 0.001;
+	const int FRAME_FREQUENCY = 30;
+	const float BRIGHTNESS_DECAY = 0.999;
+	const float DISTANCE_TO_TARGET = 1;
 
 private slots:
-    void on_plotButton_clicked(bool checked);
-    void on_startButton_clicked();
-    void on_stopButton_clicked();
+	void on_plotButton_clicked(bool checked);
+	void on_startButton_clicked();
+	void on_stopButton_clicked();
 
-    void plotFrame();
-private:
-    Ui::MainWindow *ui;
-    QTimer *timer;
+	void plotFrame();
+	void on_noiseSetButton_clicked();
 
-    const float FRAME_STEP = 0.001;
-    const int FRAME_FREQUENCY = 30;
-    const float BRIGHTNESS_DECAY = 0.999;
-    const float DISTANCE_TO_TARGET = 1;
+	void on_defaultButton_clicked();
 };
 #endif // MAINWINDOW_H

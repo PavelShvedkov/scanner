@@ -49,6 +49,8 @@ public:
     QPushButton *plotButton;
     QPushButton *startButton;
     QPushButton *stopButton;
+    QPushButton *defaultButton;
+    QPushButton *noiseSetButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -57,7 +59,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->setWindowModality(Qt::NonModal);
-        MainWindow->resize(768, 343);
+        MainWindow->resize(832, 445);
         MainWindow->setMinimumSize(QSize(768, 0));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
@@ -227,13 +229,23 @@ public:
 
         formLayout_3->setWidget(9, QFormLayout::SpanningRole, stopButton);
 
+        defaultButton = new QPushButton(centralwidget);
+        defaultButton->setObjectName("defaultButton");
+
+        formLayout_3->setWidget(10, QFormLayout::SpanningRole, defaultButton);
+
+        noiseSetButton = new QPushButton(centralwidget);
+        noiseSetButton->setObjectName("noiseSetButton");
+
+        formLayout_3->setWidget(11, QFormLayout::SpanningRole, noiseSetButton);
+
 
         horizontalLayout_2->addLayout(formLayout_3);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 768, 22));
+        menubar->setGeometry(QRect(0, 0, 832, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -257,6 +269,8 @@ public:
         plotButton->setText(QCoreApplication::translate("MainWindow", "Plot", nullptr));
         startButton->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
         stopButton->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
+        defaultButton->setText(QCoreApplication::translate("MainWindow", "Default", nullptr));
+        noiseSetButton->setText(QCoreApplication::translate("MainWindow", "Noise setting", nullptr));
     } // retranslateUi
 
 };
